@@ -76,6 +76,7 @@ namespace confer
                         db.Jury.Add(jury);
                        
                     }
+
                     else if (role == "Модератор")
                     {
                         Moderators moderator = new Moderators()
