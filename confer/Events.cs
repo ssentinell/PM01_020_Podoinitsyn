@@ -17,8 +17,10 @@ namespace confer
         public int ID { get; set; }
         public string Title { get; set; }
         public System.DateTime Date { get; set; }
-        public string Days { get; set; }
+        public int Days { get; set; }
         public int City_ID { get; set; }
         public string Logo { get; set; }
+    
+        public virtual City City { get; set; }
     }
 }

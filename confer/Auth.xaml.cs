@@ -59,7 +59,7 @@ namespace confer
                 return false;
             }
 
-            using (var db = new Entities())
+            using (var db = new Entities2())
             {
                 var moderator = db.Moderators.AsNoTracking().FirstOrDefault(u => u.ID.ToString() == login && u.Password == password);
                 if (AuthenticateUser(moderator, new Moder(), "", ""))

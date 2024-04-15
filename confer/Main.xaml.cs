@@ -23,7 +23,7 @@ namespace confer
         public Main()
         {
             InitializeComponent();
-            var currentMain = Entities.GetContext().Events.ToList();
+            var currentMain = Entities2.GetContext().Events.ToList();
 
             ListHome.ItemsSource = currentMain;
             txtSearch.TextChanged += TxtSearch_TextChanged;
@@ -34,7 +34,7 @@ namespace confer
         private void UpdateUsers()
         {
             //загружаем всех пользователей в список
-            var currentMain = Entities.GetContext().Events.ToList();
+            var currentMain = Entities2.GetContext().Events.ToList();
 
             currentMain = currentMain.Where(x =>
        x.Title.ToLower().Contains(txtSearch.Text.ToLower())).ToList();

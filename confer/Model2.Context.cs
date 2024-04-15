@@ -13,18 +13,17 @@ namespace confer
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class Entities : DbContext
+    public partial class Entities2 : DbContext
     {
-        private static Entities _context;
-
-        public static Entities GetContext()
+        private static Entities2 _context;
+        public static Entities2 GetContext()
         {
             if (_context == null)
-                _context = new Entities();
+                _context = new Entities2();
             return _context;
         }
-        public Entities()
-            : base("name=Entities")
+        public Entities2()
+            : base("name=Entities2")
         {
         }
     
@@ -40,5 +39,7 @@ namespace confer
         public virtual DbSet<Moderators> Moderators { get; set; }
         public virtual DbSet<Organizers> Organizers { get; set; }
         public virtual DbSet<Participants> Participants { get; set; }
+        public virtual DbSet<Specialities> Specialities { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
     }
 }

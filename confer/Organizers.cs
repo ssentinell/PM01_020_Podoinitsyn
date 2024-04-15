@@ -25,5 +25,7 @@ namespace confer
         public string Password { get; set; }
         public string Photo { get; set; }
         public string Gender { get; set; }
+    
+        public virtual Country Country { get; set; }
     }
 }

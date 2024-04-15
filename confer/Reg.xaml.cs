@@ -57,7 +57,7 @@ namespace confer
             }
             else
             {
-                using (var db = new Entities())
+                using (var db = new Entities2())
                 {
                     var role = role1;
 
@@ -69,7 +69,6 @@ namespace confer
                             Mail = mail,
                             Tel = tel,
                             Password = password,
-                            Direct = direct,
 
                         };
 
@@ -83,7 +82,6 @@ namespace confer
                         {
                             ID = uniqueId,
                             Password = password,
-                            Direct = direct,
                             Event = eventn
                         };
 

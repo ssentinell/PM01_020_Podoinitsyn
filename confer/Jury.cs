@@ -15,12 +15,19 @@ namespace confer
     public partial class Jury
     {
         public int ID { get; set; }
+        public string Name { get; set; }
+        public string Surname { get; set; }
+        public string Patronymic { get; set; }
         public string Mail { get; set; }
         public System.DateTime Date_birth { get; set; }
-        public int Country_ID { get; set; }
+        public int CountryID { get; set; }
         public string Tel { get; set; }
-        public string Direct { get; set; }
         public string Password { get; set; }
         public string Photo { get; set; }
+        public string Gender { get; set; }
+        public int SpecialityID { get; set; }
+    
+        public virtual Country Country { get; set; }
+        public virtual Specialities Specialities { get; set; }
     }
 }

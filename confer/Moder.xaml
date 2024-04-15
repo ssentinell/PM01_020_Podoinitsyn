@@ -8,7 +8,7 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Moder">
 
-    <Grid Background="Red">
-        <TextBlock>Я МОЖЕЕДЕР</TextBlock>
+    <Grid Background="White">
+        <TextBlock><Run Text="Я "/><Run Text="модер"/><LineBreak/><Run/></TextBlock>
     </Grid>
 </Page>

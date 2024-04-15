@@ -12,19 +12,21 @@ namespace confer
     using System;
     using System.Collections.Generic;
     
-    public partial class City
+    public partial class Specialities
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public City()
+        public Specialities()
         {
-            this.Events = new HashSet<Events>();
+            this.Jury = new HashSet<Jury>();
+            this.Moderators = new HashSet<Moderators>();
         }
     
         public int ID { get; set; }
-        public string Name { get; set; }
-        public string Photo { get; set; }
+        public string Title { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Events> Events { get; set; }
+        public virtual ICollection<Jury> Jury { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Moderators> Moderators { get; set; }
     }
 }

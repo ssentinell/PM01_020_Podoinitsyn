@@ -23,9 +23,9 @@ namespace confer
         {
             try
             {
-                using (var db = Entities.GetContext())
+                using (var db = Entities2.GetContext())
                 {
-                    // Получаем пользователя по ID
+                    
                     var user = db.Organizers.FirstOrDefault(u => u.ID == loggedInUserId);
 
                     
@@ -35,16 +35,16 @@ namespace confer
                     {
                       
 
-                        // Проверяем, что у пользователя есть фото
+                        
                         if (!string.IsNullOrEmpty(user.Photo))
                         {
-                            // Создаем изображение из пути к фото
+                            
                             BitmapImage bitmap = new BitmapImage();
                             bitmap.BeginInit();
                             bitmap.UriSource = new Uri(user.Photo, UriKind.RelativeOrAbsolute);
                             bitmap.EndInit();
 
-                            // Устанавливаем изображение в Image в XAML
+                            
                             userPhoto.Source = bitmap;
                         }
                         else
