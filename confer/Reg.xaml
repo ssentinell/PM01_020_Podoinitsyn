@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Registration" Height="450" Width="600">
     <Grid Background="White">
+        
  
         <Label Content="ID Number:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="2,2,0,0"/>
         <TextBox x:Name="UniqueIdTextBox" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,2,0,0" Width="204" IsReadOnly="True" />
